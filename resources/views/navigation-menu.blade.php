@@ -16,6 +16,12 @@ m<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
                 </div>
+                
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('kendaraanPage') }}" :active="request()->routeIs('kendaraanPage')">
+                        kendaraanPage
+                    </x-jet-nav-link>
+                </div>
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -113,8 +119,8 @@ m<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                                 @csrf
 
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
-                                         onclick="event.preventDefault();
-                                                this.closest('form').submit();">
+                                        onclick="event.preventDefault();
+                                            this.closest('form').submit();">
                                     {{ __('Log Out') }}
                                 </x-jet-dropdown-link>
                             </form>
@@ -175,7 +181,7 @@ m<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                     @csrf
 
                     <x-jet-responsive-nav-link href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
+                                onclick="event.preventDefault();
                                     this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-jet-responsive-nav-link>

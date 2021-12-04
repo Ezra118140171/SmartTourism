@@ -21,6 +21,11 @@ class UserSeeder extends Seeder
                 'email'     => 's@s',
                 'password'  => bcrypt(1),
             ],
+            [
+                'name'      => 'keuangan',
+                'email'     => 'k@k',
+                'password'  => bcrypt(2),
+            ],
         ];
         foreach ($user as $key => $value) {
             User::create($value);

@@ -803,6 +803,9 @@ select {
 .prose ol[type="i"] {
 	--list-counter-style: lower-roman;
 }
+.bg-repeat{
+	background-repeat: repeat;
+}
 .prose ol[type="I" s] {
 	--list-counter-style: upper-roman;
 }
@@ -1467,7 +1470,7 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(99, 102, 241, var(--tw-bg-opacity));
 }
-.bg-red-700 {
+.bg-red-00 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
 }
@@ -1740,6 +1743,14 @@ select {
 .text-gray-200 {
 	--tw-text-opacity: 1;
 	color: rgba(229, 231, 235, var(--tw-text-opacity));
+}
+.text-yellow-300{
+	--tw-text-opacity: 1;
+	color: rgba(252, 211, 77, var(--tw-text-opacity));
+}
+.text-yellow-500{
+	--tw-text-opacity: 1;
+color: rgba(245, 158, 11, var(--tw-text-opacity));
 }
 .text-gray-300 {
 	--tw-text-opacity: 1;

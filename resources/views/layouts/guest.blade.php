@@ -16,7 +16,7 @@
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body>
+    <body class="" style="background-image: url({{ asset('Screen.png') }})">
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>

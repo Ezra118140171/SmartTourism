@@ -1,4 +1,4 @@
-m<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-red-600 border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -18,8 +18,20 @@ m<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
                 </div>
                 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('kendaraanPage') }}" :active="request()->routeIs('kendaraanPage')">
-                        kendaraanPage
+                    <x-jet-nav-link href="{{ route('vehicle.index') }}" :active="request()->routeIs('vehicle.index')">
+                        {{ __('Kendaraan') }}
+                    </x-jet-nav-link>
+                </div>
+                
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('grafik.index') }}" :active="request()->routeIs('grafik.index')">
+                        {{ __('Grafik') }}
+                    </x-jet-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="{{ route('role.index') }}" :active="request()->routeIs('role.index')">
+                        {{ __('User Role') }}
                     </x-jet-nav-link>
                 </div>
             </div>

@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\KendaraanController;
-use App\Http\Livewire\kendaraanPage;
+use App\Http\Controllers\VehicleController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\GrafikController;
 use Illuminate\Routing\RouteGroup;
 use PHPUnit\TextUI\XmlConfiguration\Group;
 
@@ -28,12 +29,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 })->name('dashboard');
 
-Route::group(['middleware' => ['auth:sanctum','verified']], function() {
-    Route::get('kendaraanPage', kendaraanPage::class)->name('kendaraanPage');
-
-});
-
-Route::resource('kendaraan', KendaraanController::class);
+Route::resource('vehicle', VehicleController::class);
+Route::resource('role', RoleController::class);
+Route::resource('grafik', GrafikController::class);
 
 
 // Route::group(['middleware' => ['auth:sanctum','verified']], function() {
